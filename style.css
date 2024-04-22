@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter",sans-serif;
+    /* font-family: "Herr Von Muellerhoff", cursive; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    cursor: pointer;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in-out;
+    -webkit-transition: flex 0.7s ease-in-out;
+    -moz-transition: flex 0.7s ease-in-out;
+    -ms-transition: flex 0.7s ease-in-out;
+    -o-transition: flex 0.7s ease-in-out;
+}
+.panel h3{
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin: 0px;
+    opacity: 0;
+}
+.panel.active h3{
+    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0,4s;
+    -webkit-transition: opacity 0.3s ease-in 0,4s;
+    -moz-transition: opacity 0.3s ease-in 0,4s;
+    -ms-transition: opacity 0.3s ease-in 0,4s;
+    -o-transition: opacity 0.3s ease-in 0,4s;
+    color: rgb(209, 210, 212);
+}
+.panel.active{
+    flex: 5;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+@media (max-width: 768px){
+    .container{
+        width: 100vh;
+    }
+    .panel:last-child{
+        display: none;
+    }
+}
+@media (max-width: 500px){
+    .container{
+        width: 100vh;
+    }
+    .panel:nth-child(4){
+        display: none;
+    }
+}
+.panel:first-child{
+    background-image: url('https://cdn.ye-mek.net/App_UI/Img/out/650/2016/07/babagannus-resimli-yemek-tarifi(11).jpg');
+}
+
+.panel:nth-child(2) {
+    background-image: url('image/pexels-vanmalidate-769289.jpg');
+}
+.panel:nth-child(3) {
+    background-image: url('image/pexels-fotios-photos-1279330.jpg');
+}
+.panel:nth-child(4){
+    background-image: url('image/pexels-foodie-factor-162291-539451.jpg');
+}
+.panel:last-child{
+    background-image: url('image/pexels-robinstickel-70497.jpg');
+}
